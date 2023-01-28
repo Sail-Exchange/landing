@@ -3,16 +3,18 @@ import * as THREE from 'three';
 const boat = (): void => {
 	const renderer = new THREE.WebGLRenderer({
 		canvas: document.getElementById('three-scene') as HTMLCanvasElement,
+		alpha: true,
 	});
 
 	var scene = new THREE.Scene();
 	var camera = new THREE.PerspectiveCamera(
 		75,
-		renderer.domElement.parentElement!.clientWidth /
-			renderer.domElement.parentElement!.clientHeight,
+		renderer.domElement.width / renderer.domElement.height,
 		0.1,
 		1000
 	);
+
+	renderer.setSize(renderer.domElement.width, renderer.domElement.height);
 
 	document.body.appendChild(renderer.domElement);
 
@@ -31,6 +33,15 @@ const boat = (): void => {
 
 		renderer.render(scene, camera);
 	}
+
+	function onWindowResize() {
+		camera.aspect = renderer.domElement.width / renderer.domElement.height;
+		camera.updateProjectionMatrix();
+
+		renderer.setSize(renderer.domElement.width, renderer.domElement.height);
+	}
+
+	window.addEventListener('resize', onWindowResize, false);
 
 	animate();
 };

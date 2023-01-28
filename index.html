@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<link href="/src/index.css" rel="stylesheet" />
 		<link
 			rel="preload"
@@ -19,17 +19,18 @@
 			crossorigin
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vite + TS</title>
+		<title>Sail</title>
 	</head>
-	<body class="p-12 flex justify-center text-neutral-50 bg-black font-mona">
+	<body
+		class="pb-12 px-12 flex flex-col justify-center items-center text-neutral-50 bg-black font-mona"
+	>
 		<div
 			class="w-[300px] h-[900px] bg-red-700 -translate-y-[250px] -translate-x-[250px] rounded-full blur-[1000px] absolute -z-10 left-0 top-0"
 		></div>
-		<div class="flex flex-col w-full max-w-3xl">
-			<!-- <canvas id="three-scene" class="w-full border"></canvas> -->
-			<div class="w-full flex items-center justify-center animate-fade-in">
+		<div class="w-full flex items-center justify-center animate-fade-in mt-8">
+			<a href="http://127.0.0.1:5173/">
 				<svg
-					width="34"
+					width="24"
 					height="48"
 					viewBox="0 0 34 48"
 					class="stroke-neutral-900"
@@ -40,11 +41,14 @@
 						stroke-width="4"
 					/>
 				</svg>
-			</div>
+			</a>
+		</div>
+		<div class="flex flex-col w-full max-w-3xl">
+			<canvas id="three-scene" class="border"></canvas>
 			<div class="flex flex-row space-x-2 items-center">
-				<h1 class="text-5xl font-hubot mt-12 tracking-tighter">Sail</h1>
+				<h1 class="text-7xl font-hubot mt-12 tracking-tighter">Sail</h1>
 			</div>
-			<div class="mt-4">
+			<div class="mt-4 text-2xl">
 				A central limit order book built on
 				<a
 					href="https://www.fuel.network/"
