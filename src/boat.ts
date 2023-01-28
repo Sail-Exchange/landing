@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 const boat = (): void => {
 	const renderer = new THREE.WebGLRenderer({
@@ -13,6 +14,13 @@ const boat = (): void => {
 		0.1,
 		1000
 	);
+
+	const loader = new GLTFLoader();
+
+	loader.load('/boat.glb', function (gltf) {
+		scene.add(gltf.scene);
+		// console.log(gltf.scene);
+	});
 
 	renderer.setSize(renderer.domElement.width, renderer.domElement.height);
 
