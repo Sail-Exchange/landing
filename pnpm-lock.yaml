@@ -1,11 +1,17 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/three': ^0.144.0
   autoprefixer: ^10.4.13
   postcss: ^8.4.21
   tailwindcss: ^3.2.4
+  three: ^0.145.0
   typescript: ^4.9.3
   vite: ^4.0.0
+
+dependencies:
+  '@types/three': 0.144.0
+  three: 0.145.0
 
 devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.21
@@ -234,6 +240,16 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
     dev: true
+
+  /@types/three/0.144.0:
+    resolution: {integrity: sha512-psvEs6q5rLN50jUYZ3D4pZMfxTbdt3A243blt0my7/NcL6chaCZpHe2csbCtx0SOD9fI/XnF3wnVUAYZGqCSYg==}
+    dependencies:
+      '@types/webxr': 0.5.1
+    dev: false
+
+  /@types/webxr/0.5.1:
+    resolution: {integrity: sha512-xlFXPfgJR5vIuDefhaHuUM9uUgvPaXB6GKdXy2gdEh8gBWQZ2ul24AJz3foUd8NNKlSTQuWYJpCb1/pL81m1KQ==}
+    dev: false
 
   /acorn-node/1.8.2:
     resolution: {integrity: sha512-8mt+fslDufLYntIoPAaIMUe/lrbrehIiwmR3t2k9LljIzoigEPF27eLk2hy8zSGzmR/ogr7zbRKINMo1u0yh5A==}
@@ -719,6 +735,10 @@ packages:
     transitivePeerDependencies:
       - ts-node
     dev: true
+
+  /three/0.145.0:
+    resolution: {integrity: sha512-EKoHQEtEJ4CB6b2BGMBgLZrfwLjXcSUfoI/MiIXUuRpeYsfK5aPWbYhdtIVWOH+x6X0TouldHKHBuc/LAiFzAw==}
+    dev: false
 
   /to-regex-range/5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
