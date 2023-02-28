@@ -1,20 +1,14 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
-			animation: {
-				'fade-in': 'fadeIn 2s ease-in-out',
-			},
-			keyframes: {
-				fadeIn: {
-					'0%': { opacity: 0, transform: 'translateY(50%)' },
-					'100%': { opacity: 1, transform: 'translateY(0)' },
-				},
-			},
 			fontFamily: {
 				mona: ['Mona-Sans', 'sans-serif'],
 				hubot: ['Hubot-Sans', 'sans-serif'],
+				sans: ['Mona-Sans', 'Inter', ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},

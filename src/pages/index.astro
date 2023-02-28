@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Banner from '../components/Banner.astro';
+---
+
+<script>
+	import { createScene } from '../three/scene';
+
+	const el = document.getElementById('something') as HTMLDivElement;
+	if (el) {
+		createScene(el, 'sail');
+	}
+</script>
+
+<Layout title='Sail'>
+	<main>
+		<div class='flex flex-col justify-between'>
+		<Banner/>
+		<div class='px-16 py-8 h-[100vh] bg-black'>
+			<Header/>
+			<div class='text-6xl max-w-sm pt-48'>
+				A central limit book order built on fuel.
+			</div>
+			<div class='w-full'>
+				<div id='something' class='justify-end translate-y-[-5vh] translate-x-[20vw] md:translate-x-[30vw] lg:translate-x-[50vw]'>
+			</div>
+		</div>
+		</div>
+		<Footer/>
+	</div>
+	</main>
+</Layout>

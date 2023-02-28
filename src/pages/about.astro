@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Banner from '../components/Banner.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+---
+
+<Layout title='About'>
+	<main>
+		<div class='flex flex-col justify-between'>
+		<Banner/>
+		<div class='px-16 py-8 bg-black'>
+			<Header />
+			<div class='flex-row'>
+				<div class='w-full text-right flex justify-end'>
+					<h1 class='text-8xl mt-36 max-w-2xl'>Built for <strong>resilience</strong> and <strong>efficiency</strong>.</h1>
+				</div>
+				<div class='w-full border-t-[1px] mt-12 border-gray-400'/>
+				<div class='mt-4'>
+					<div class='my-24 text-5xl max-w-md'><italic class='italic'>Efficient</italic> approach to book orders.</div>
+				</div>
+				<div class='max-w-2xl mb-48'>
+					<p class='text-xl'>Current implementations of order
+						books on-chain do not meet demand because they have low throughput,
+						contribute heavily to state bloat, or are not fully decentralized.
+						Building Sail on Fuel allows for the parallelization of transactions
+						and takes full advantage of all the optimizations made in the FuelVM.
+						Predicates also minimize state bloat because they are only processed
+						once, as the order is filled and then discarded</p>
+				</div>
+			</div>
+		</div>
+		<Footer/>
+	</div>
+	</main>
+</Layout>

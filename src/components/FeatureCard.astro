@@ -1,0 +1,13 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+}
+
+const { title, body } = Astro.props;
+---
+
+<div class="border border-white rounded-sm w-72 h-48">
+	<span>{title}</span>
+	<p>{body}</p>
+</div>
