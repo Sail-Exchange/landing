@@ -6,8 +6,17 @@
 // }
 
 // const { href, title, body } = Astro.props;
+import TwitterIcon from './TwitterIcon.astro'
+import GithubIcon from './GithubIcon.astro';
 ---
 
-<div class='h-[5vh] bg-neutral-900 px-12 py-8 text-black flex items-center'>
-	<div class='text-lg text-neutral-400'>Sail © 2023</div>
+
+<div class='h-[5vh] bg-neutral-900 px-12 py-8 text-black flex flex-row items-center'>
+	<div class="flex flex-row justify-between w-full">
+		<div class='text-lg text-neutral-400'>Sail © 2023</div>
+		<div class="flex flex-row">
+			<a target= "_black" href="https://twitter.com/_sailexchange"><TwitterIcon/></a>
+			<a target="_blank" href="https://github.com/Sail-Exchange"><GithubIcon/></a>
+		</div>
+	</div>
 </div>
