@@ -1,16 +1,19 @@
 ---
 import GithubIcon from './GithubIcon.astro';
 import TwitterIcon from './TwitterIcon.astro';
+import { Image } from '@astrojs/image/components';
+import sailLogo from '../../assets/sailLogo.png'
+import sailLogoTrans from '../../assets/SailLogoTrans.png'
 
 ---
 
 <div class='flex w-full items-center justify-between'>
 	<div>
 		<a class = 'flex flex-row items-center' href='/'>
-			<div class="w-24">
-				<img class="rounded-lg mr-2" width="70" src="https://s.mj.run/zNZHUYpMppI" alt="Sail company logo.">
+			<div class="w-30">
+				<!-- <Image src={sailLogoTrans} alt="descriptive text" /> -->
+				<img class="w-40" src= '../../assets/SailLogoTrans.png' alt="Sail company logo.">
 			</div>
-			<h1 class='font-hubot uppercase text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold'>Sail</h1>
 		</a>
 	</div>
 	<div class='space-x-2 sm:space-x-4 md:space-x-8 lg:space-x-12 xl:space-x-12 text-xl'>
